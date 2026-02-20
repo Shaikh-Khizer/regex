@@ -1,5 +1,5 @@
 # regex
-Regex Pattern Scanner  A lightweight and efficient **Regex-based Token Scanner** written in Python.   This tool scans tokens using predefined regex rules to detect sensitive patterns such as API keys, email addresses, secrets, and more.
+Regex Pattern Scanner  A lightweight and efficient **Regex-based Token Scanner** written in Python.   This tool scans tokens using predefined regex rules to detect sensitive patterns such as API keys, Tokens etc based on regex, secrets, and more.
 
 ---
 
@@ -23,6 +23,20 @@ Regex Pattern Scanner  A lightweight and efficient **Regex-based Token Scanner**
 | `-d, --directory DIRECTORY` | Rules directory (default: `./list`) |
 | `--no-color`                | Disable colored output                       |
 
+## 🔍 Examples
+
+### Scan a single token:
+```bash
+python3 regex.py -t "example@email.com"
+```
+### Scan tokens from file:
+```bash
+python3 regex.py -f tokens.txt
+```
+### Use custom rules directory:
+```bash
+python3 regex.py -d /custom/rules -t AKIAIOSFODNN7EXAMPLE
+```
 
 ## 📦 Installation
 
