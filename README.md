@@ -60,5 +60,5 @@ See the [LICENSE](LICENSE) file for details.
 ---
 👨‍💻 Author
 
-Shaikh Khizer
+**Shaikh Khizer**
 Computer Science Student | Penetration Tester
