@@ -8,7 +8,7 @@ import glob
 import argparse
 from collections import defaultdict
 
-DEFAULT_RULES_DIR = "/opt/regex/list"
+DEFAULT_RULES_DIR = "list"
 
 
 # ==========================================================
