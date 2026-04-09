@@ -15,18 +15,22 @@ Regex Pattern Scanner  A lightweight and efficient **Regex-based Token Scanner**
 ---
 
 ## Options:
-| Option                      | Description                                  |
-| --------------------------- | -------------------------------------------- |
-| `-h, --help`                | Show help message                            |
-| `-t, --token TOKEN`         | Scan a single token                          |
-| `-f, --file FILE`           | Scan tokens from file                        |
-| `-d, --directory DIRECTORY` | Rules directory (default: `./list`) |
-| `--no-color`                | Disable colored output                       |
-
+| Argument | Short | Type | Default | Description |
+|----------|-------|------|---------|-------------|
+| `--help` | `-h` | flag | — | Show help message and exit |
+| `--token` | `-t` | string | — | Scan a single token |
+| `--file` | `-f` | path | — | Scan tokens from a file (one per line) |
+| `--directory` | `-d` | path | `/opt/regex/list` | Rules directory |
+| `--json` | — | path | — | Save results as JSON to FILE |
+| `--csv` | — | path | — | Save results as CSV to FILE |
+| `--min-score` | — | float | `0` | Only show matches with composite score >= N |
+| `--no-color` | — | flag | — | Disable colored terminal output |
+| `--no-dedup` | — | flag | — | Disable deduplication (scan duplicate tokens too) |
 ## 🔍 Examples
 
 ### Scan a single token:
 ```bash
+sudo apt install python3-regex
 python3 regex.py -t "example@email.com"
 ```
 ### Scan tokens from file:
@@ -43,7 +47,6 @@ python3 regex.py -d /custom/rules -t AKIAIOSFODNN7EXAMPLE
 ### 1️⃣ Requirements
 
 - Python 3.8+
-- Linux / macOS (Windows should also work with Python installed)
 
 Check Python version:
 
